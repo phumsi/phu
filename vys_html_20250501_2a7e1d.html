@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Trúc Vy ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            color: #555;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .heart {
+            color: #ff4757;
+            font-size: 1.5em;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .memory {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .photo-frame {
+            border: 10px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            max-width: 300px;
+        }
+        button {
+            background: #ff6b81;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+        button:hover {
+            background: #ff4757;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cậu và Tớ <span class="heart">❤</span></h1>
+            <p>Một chặng đường đáng nhớ</p>
+        </header>
+
+        <div class="memory">
+            <h2>Nhớ không...</h2>
+            <p>Cậu biết không, thời gian trôi nhanh hơn mình nghĩ. Nhìn lại thì... oh cả một chặng đường dài.</p>
+            <p>Từ cái ngày đầu hai đứa mình gặp nhau, tớ không nghĩ rằng cậu sẽ là người yêu tớ đâu. Tớ chỉ cảm thấy chắc tớ và cậu sẽ mau chóng chuyển chỗ vì tớ không quen ngồi với con gái.</p>
+            <p>Nhưng ngồi với cậu được một thời gian thì tớ mới nhận ra cậu không quá tệ đâu.</p>
+            
+            <div class="photo-frame">
+                <!-- Thay link ảnh của 2 bạn vào đây -->
+                <img src="https://i.imgur.com/JqYeYnW.jpg" alt="Ảnh của 2 bạn" style="width:100%;">
+            </div>
+        </div>
+
+        <div class="memory">
+            <h2>Lần đầu nắm tay</h2>
+            <p>Lần đầu nắm tay khi thời gian ngừng trôi và mọi giác quan bỗng trở nên nhạy cảm lạ thường.</p>
+            <p>Bàn tay có thể hơi lạnh, hơi ấm, hoặc bối rối, nhưng cái cách các ngón tay khẽ đan vào nhau khiến trái tim tớ đập loạn nhịp.</p>
+            <p>Đó là sự rụt rè của cái chạm đầu tiên, là nụ cười ngượng ngùng không dám nhìn thẳng...</p>
+        </div>
+
+        <div class="memory">
+            <h2>Điều tớ thích ở cậu</h2>
+            <p>Tớ thích cái cách cậu cười híp mắt khi trêu tớ, thích cả cái mặt cậu nhăn nhó lúc học bài.</p>
+            <p>Thích ngồi nghe cậu kể chuyện trên trời dưới đất dù đôi khi tớ chả hiểu gì.</p>
+            <p>Thích luôn cả cái tính cậu chỉ cần một cây kẹo mút là lại cười.</p>
+        </div>
+
+        <div class="memory" style="text-align: center;">
+            <h2>Lời hứa của tớ</h2>
+            <p>Tớ không hứa sẽ làm cậu hạnh phúc như trong phim, vì tớ cũng quê mùa và vụng về.</p>
+            <p>Nhưng tớ hứa sẽ luôn đứng đợi cậu dù trời nắng hay mưa, sẽ nhường cậu miếng bánh cuối cùng, và sẽ là thằng ngốc để cậu trêu hoài không chán.</p>
+            
+            <button onclick="showHeart()">Bấm vào đây nè!</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with <span class="heart">❤</span> for Trúc Vy</p>
+    </footer>
+
+    <script>
+        function showHeart() {
+            alert("Tớ yêu cậu nhiều lắm! ❤️");
+            // Tạo hiệu ứng trái tim bay
+            for(let i=0; i<30; i++) {
+                createHeart();
+            }
+        }
+        
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            heart.style.animation = 'fall ' + (Math.random() * 3 + 2) + 's linear forwards';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        
+        // Thêm style cho hiệu ứng rơi
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fall {
+                to {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
